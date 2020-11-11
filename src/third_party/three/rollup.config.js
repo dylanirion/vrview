@@ -23,12 +23,13 @@ function glsl () {
 }
 
 export default {
-	entry: 'src/third_party/three/Three.js',
-	dest: 'build/three.js',
-	moduleName: 'THREE',
-	format: 'umd',
+	'input': 'src/third_party/three/Three.js',
+	output: {
+		file: 'build/three.js',
+		name: 'THREE',
+		format: 'umd',
+		outro: outro },
 	plugins: [
 		glsl()
 	],
-	outro: outro
 };
