@@ -74,7 +74,7 @@ IFrameMessageSender.prototype.cloneDeviceMotionEvent_ = function(e) {
 };
 
 IFrameMessageSender.prototype.isIOS_ = function() {
-  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  return ['iPad Simulator','iPhone Simulator','iPod Simulator','iPad','iPhone','iPod'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
 };
 
 module.exports = IFrameMessageSender;
