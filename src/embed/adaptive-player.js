@@ -30,6 +30,7 @@ var DEFAULT_BITS_PER_SECOND = 1000000;
  *   error(message): If an error occurs.
  *
  * To play/pause/seek/etc, please use the underlying video element.
+ * @todo: https://github.com/mrdoob/three.js/issues/9754#issuecomment-694924074
  */
 function AdaptivePlayer(params) {
   this.video = document.createElement('video');
