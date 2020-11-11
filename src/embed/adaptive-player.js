@@ -67,18 +67,14 @@ AdaptivePlayer.prototype.load = function(url) {
   switch (extension) {
     case 'm3u8': // HLS
       this.type = Types.HLS;
-      if (Util.isSafari()) {
-        this.loadVideo_(url).then(function() {
-          self.emit('load', self.video, self.type);
-        }).catch(this.onError_.bind(this));
-      } else {
-        self.onError_('HLS is only supported on Safari.');
-      }
+      this.loadShakaVideo_(url).then(function() {
+        self.emit('load', self.video, self.type);
+      }).catch(this.onError_.bind(this));
       break;
     case 'mpd': // MPEG-DASH
       this.type = Types.DASH;
       this.loadShakaVideo_(url).then(function() {
-        console.log('The video has now been loaded!');
+        //console.log('The video has now been loaded!');
         self.emit('load', self.video, self.type);
       }).catch(this.onError_.bind(this));
       break;
