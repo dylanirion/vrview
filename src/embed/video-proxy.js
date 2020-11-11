@@ -42,9 +42,10 @@ VideoProxy.prototype.play = function() {
     this.audioElement.src = this.videoElement.src;
     this.audioElement.play();
   } else {
-    this.videoElement.play().then(function(e) {
-      console.log('Playing video.', e);
-    });
+    //this.videoElement.play().then(function(e) {
+    //  console.log('Playing video.', e);
+    //});
+    this.videoElement.play();
   }
 };
 
