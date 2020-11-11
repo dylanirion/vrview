@@ -39,6 +39,13 @@ var AUTOPAN_ANGLE = 0.4;
  *   load: when the scene is loaded.
  *   error: if there is an error loading the scene.
  *   modechange(Boolean isVR): if the mode (eg. VR, fullscreen, etc) changes.
+ * @todo: upgrade THREE.js
+ *  - https://github.com/mrdoob/three.js/issues/11301#issuecomment-308641241
+ *  - this involves reworking references to VRControls and VREffect here, and Math export in third_party\three\Three.js
+ *  - https://threejs.org/docs/index.html#manual/en/introduction/How-to-create-VR-content
+ *  - https://threejs.org/examples/?q=webvr
+ *  - "Math has been renamed to MathUtils, and /examples/js/utils/MathUtils.js has been promoted to the core."
+ * 
  */
 function WorldRenderer(params) {
   this.init_(params.hideFullscreenButton);
