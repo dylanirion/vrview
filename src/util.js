@@ -36,7 +36,7 @@ Util.isMobile = function() {
 };
 
 Util.isIOS = function() {
-  return /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+  return ['iPad Simulator','iPhone Simulator','iPod Simulator','iPad','iPhone','iPod'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
 };
 
 Util.isSafari = function() {
