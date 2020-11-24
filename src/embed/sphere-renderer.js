@@ -177,7 +177,8 @@ SphereRenderer.prototype.createPhotosphere_ = function(texture, opt_params) {
         "uniform sampler2D texture;",
         "varying vec2 vUV;",
         "void main() {",
-        " gl_FragColor = texture2D( texture, vUV  )" + (Util.isIOS() ? ".bgra" : "") + ";",
+        //" gl_FragColor = texture2D( texture, vUV  )" + (Util.isIOS() ? ".bgra" : "") + ";",
+        " gl_FragColor = texture2D( texture, vUV  );",
         "}"
       ].join("\n")
     });

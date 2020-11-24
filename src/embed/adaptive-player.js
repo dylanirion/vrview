@@ -30,7 +30,7 @@ var DEFAULT_BITS_PER_SECOND = 1000000;
  *   error(message): If an error occurs.
  *
  * To play/pause/seek/etc, please use the underlying video element.
- * @todo: black screen on iOS 14 with HLS (WebGL?)
+ * @todo: black screen on iOS 14 (<14.2) with HLS (WebGL?)
  *  - https://bugs.webkit.org/show_bug.cgi?id=215908
  *  - https://github.com/mrdoob/three.js/issues/9754#issuecomment-694924074
  */
